@@ -3,8 +3,8 @@ const User = require("../models/user");
 
 function signUp(req, res) {
   const user = new User();
-  const { name, lastname, email, password, repeatPassword } = req.body;
-  user.name = name;
+  const { name_user, lastname, email, password, repeatPassword } = req.body;
+  user.name_user = name_user;
   user.lastname = lastname;
   user.email = email;
   /* Por default almacenamos el rol y si es un usuario activo o no */
