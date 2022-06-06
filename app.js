@@ -1,3 +1,4 @@
+const cors = require("cors")
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -10,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 /* Evitar bloqueo del CORS*/
-
+app.use(cors())
 
 /* Creación de los endpoint del proyecto */
 app.use(`/api/${API_VERSION}`, userRoutes);
